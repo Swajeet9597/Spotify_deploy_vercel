@@ -1,17 +1,17 @@
 {
-    "routes": [
-      {
-        "src": "/Songs/(.*)",
-        "dest": "/Songs/$1"
-      }
-    ],
-    "headers": [
-      {
-        "source": "/Songs/(.*)",
-        "headers": [
-          { "key": "Access-Control-Allow-Origin", "value": "*" }
-        ]
-      }
-    ]
-  }
-  
+  "redirects": [
+    {
+      "source": "/Songs/(.*)",
+      "destination": "/Songs/$1",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/Songs/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    }
+  ]
+}
