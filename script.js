@@ -511,7 +511,7 @@ async function getAllSongs(folder) {
 
     try {
         // 🔹 UPDATED: Ensuring proper fetch path
-        let a = await fetch(`./Songs/${folder}/`);
+        let a = await fetch(`/Songs/${folder}/`);
         let response = await a.text(); 
 
         let div = document.createElement("div");
@@ -551,7 +551,7 @@ const vol = (tar) => {
 
 async function getAllAlbums() {
     try {
-        let f = await fetch("./Songs/");
+        let f = await fetch("/Songs/");
         let r = await f.text();
         let div = document.createElement("div");
         div.innerHTML = r;
@@ -564,7 +564,7 @@ async function getAllAlbums() {
         albums = albums.filter(Boolean);
 
         for (const al of albums) {
-            let f = await fetch(`./Songs/${al}/info.json`);
+            let f = await fetch(`/Songs/${al}/info.json`);
             let r = await f.json();
             
             document.querySelector(".cards").innerHTML += `
