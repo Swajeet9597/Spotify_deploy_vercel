@@ -1,11 +1,6 @@
 {
-  "redirects": [
-    {
-      "source": "/Songs/(.*)",
-      "destination": "/Songs/$1",
-      "permanent": true
-    }
-  ],
+  "cleanUrls": true,
+  "trailingSlash": false,
   "headers": [
     {
       "source": "/Songs/(.*)",
