@@ -1,12 +1,5 @@
 {
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "headers": [
-    {
-      "source": "/Songs/(.*)",
-      "headers": [
-        { "key": "Access-Control-Allow-Origin", "value": "*" }
-      ]
-    }
+  "routes": [
+    { "src": "/Songs/(.*)", "dest": "/Songs/$1" }
   ]
 }
